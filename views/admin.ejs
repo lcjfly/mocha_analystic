@@ -1,0 +1,61 @@
+<%- include header %>
+<h2>Real Time activity(last 10):</h2>
+<hr>
+<table id="activity_table">
+	<thead>
+		<tr>
+			<td width="50%">Request URL</td>
+			<td width="20%">Client IP</td>
+			<td width="30%">TIMESTAMP</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% activities.forEach(function(activity) { %>
+			<tr>
+				<td><%= activity.url %></td>
+				<td><%= activity.ip %></td>
+				<td><%= activity.timestamp %></td>
+			</tr>
+		<% }) %>
+	</tbody>
+</table>
+
+<h2>Unique Visitor:</h2>
+<hr>
+<table id="uv_table">
+	<thead>
+		<tr>
+			<td width="50%">Client IP</td>
+			<td width="50%">TIMESTAMP</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% for(var key in uvs) { %>
+			<tr>
+				<td><%= key %></td>
+				<td><%= uvs[key].timestamp %></td>
+			</tr>
+		<% } %>
+	</tbody>
+</table>
+
+<h2>Page Views:</h2>
+<hr>
+<table id="pv_table">
+	<thead>
+		<tr>
+			<td width="80%">Request URL</td>
+			<td width="20%">Page Views</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% for(var key in pvs) { %>
+			<tr>
+				<td><%= key %></td>
+				<td><%= pvs[key].count %></td>
+			</tr>
+		<% } %>
+	</tbody>
+</table>
+
+<%- include footer %>
