@@ -10,7 +10,7 @@ These two things are both my love.
 ===============
 ### what does it do?
 
-I create this just for analyzing my blog site ( [http://lcjfly.github.io](http://lcjfly..github.io) ) with which i can know realtime activity , UV and PV.
+I create this just for analyzing my blog site ( [http://lcjfly.github.io](http://lcjfly.github.io) ) with which i can know realtime activity , UV and PV.
 It is cool, isn't it?
 
 ===============
